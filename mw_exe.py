@@ -178,7 +178,7 @@ word = tk.Toplevel(root)
 word.withdraw()
 word.title("Ah ah ah, you didn't say the magic word!")
 try:
-    ico = Image.open(f"{cdir}\\icon.jpeg")
+    ico = Image.open(f"{cdir}\\icon.ico")
     photo = ImageTk.PhotoImage(ico)
     word.wm_iconphoto(False, photo)
 except Exception as e:
