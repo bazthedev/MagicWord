@@ -16,7 +16,7 @@ import json
 
 tmp = tf.gettempdir()
 cdir = f"{tmp}\\content"
-condir = f"{tmp}\\app.json"
+condir = f"{tmp}\\mw.json"
 opend = False
 try:
     with open(condir, "r") as _:
