@@ -12,9 +12,27 @@ import time
 import requests
 import tempfile as tf
 import zipfile as zf
+import json
 
 tmp = tf.gettempdir()
 cdir = f"{tmp}\\content"
+condir = f"{tmp}\\app.json"
+opend = False
+try:
+    with open(condir, "r") as _:
+        config = json.load(_)
+        opend = True
+except FileNotFoundError:
+    __ = open(condir, "w")
+    __.write("{\"magic_word\": \"please\"}")
+    __.close()
+finally:
+    if not opend:
+        with open(condir, "r") as _:
+            config = json.load(_)
+
+_password = config["magic_word"]
+
 def check_for_mouse_movement(_mouse):
     global appear
     global _stop
@@ -66,7 +84,8 @@ def keyb_appear(key):
 def check_pwd():
     global _stop
     global _stop_login_lock
-    if _pwd.get() != "please":
+    global _password
+    if _pwd.get() != _password:
         _stop_login_lock = True
         _stop = True
         login.withdraw()
