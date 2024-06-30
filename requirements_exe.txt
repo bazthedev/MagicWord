@@ -1,0 +1,4 @@
+pillow
+playsound==1.2.2
+pynput
+requests
