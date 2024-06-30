@@ -3,7 +3,7 @@
 ## Changing the password:
 ### Windows:
 1. Open your temp folder (Windows Key + R, then type %temp% and press ok)
-2. Open the file called mw.json
+2. Open the file called mw.json, or create it if you haven't run the program yet
 3. Edit `please` (default password) to be a password of your own!
 4. Save and close, now running the program will use that password!
 5. Note: do not remove the "" that surround your password
