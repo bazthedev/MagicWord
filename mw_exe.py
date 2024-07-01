@@ -91,6 +91,7 @@ def check_pwd():
         login.withdraw()
         login.quit()
     else:
+        login.withdraw()
         login.destroy()
         _stop = True
         mb.showinfo("Successful Login", "Your session has been restored.")
