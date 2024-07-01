@@ -29,6 +29,7 @@ finally:
             config = json.load(_)
 
 _password = config["magic_word"]
+
 def check_for_mouse_movement(_mouse):
     global appear
     global _stop
@@ -87,6 +88,7 @@ def check_pwd():
         login.withdraw()
         login.quit()
     else:
+        login.withdraw()
         login.destroy()
         _stop = True
         mb.showinfo("Successful Login", "Your session has been restored.")
